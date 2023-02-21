@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8"> 
+        <title>Encriptacion</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="encriptar.js"></script>
+
+    </head>
+
+    <body>
+        
+        <header>
+            <h1>Programa Encriptacion</h1>
+        </header>
+        
+        <main>
+
+            <form>
+                
+                <div >
+
+                    <label>Mensaje para encriptar/desencriptar</label>
+                    <textarea id="mensaje"  class="mensaje"required style="text-transform:lowercase;" oninput="this.value = this.value.replace(/[^a-z]/,' ')"></textarea>
+
+                </div>
+
+                <div class="botones">
+
+                    <input type="button" value="Encriptar" class="encriptar" onclick="encriptar()">
+                    <input type="button" value="Desencriptar" class="desencriptar" onclick="desencriptar()">
+
+                </div>
+
+                <div>
+
+                    <label></label>
+                    <textarea id="resultado" class="resultado"required disabled></textarea>
+                    <input type="button" value="Copiar" class="copiar" onclick="copiar()">
+
+
+                </div>
+            </form>
+
+        </main>
+
+    </body>
+
+</html>
